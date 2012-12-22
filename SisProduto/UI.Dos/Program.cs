@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Aplicacao;
 using Dominio;
 using Repositorio.SQLServer;
 
@@ -12,8 +13,8 @@ namespace UI.Dos
     {
         static void Main(string[] args)
         {
-            var produtoRepositorio = new ProdutoRepositorio();
-            
+            var produtoAplicacao = new ProdutoAplicacao();
+
 
             var produtoAlterar = new Produto()
                               {
@@ -21,24 +22,24 @@ namespace UI.Dos
                                   Categoria = "Ferro",
                                   Nome = "Arruela",
                                   Saldo = 233,
-                                  ValorUnitario =  10
+                                  ValorUnitario = 10
                               };
-            produtoRepositorio.Alterar(produtoAlterar);
-            
-            
+            produtoAplicacao.AlterarProduto(produtoAlterar);
+
+
 
             var produtoInserir = new Produto()
             {
                 ProdutoId = 1,
-                Categoria = "ARROZ",
-                Nome = "COMIDA",
+                Categoria = "CARNE",
+                Nome = "CARNE MOIDA",
                 Saldo = 4,
                 ValorUnitario = 10
             };
 
-            produtoRepositorio.Inserir(produtoInserir);
+            produtoAplicacao.InserirProduto(produtoInserir);
 
-            var produtos = produtoRepositorio.ListarTodos();
+            var produtos = produtoAplicacao.ListarProdutoPorNome("CAR");
             foreach (var produto in produtos)
             {
                 Console.WriteLine("{0} - {1} - {2} - R$ {3} - {4}", produto.ProdutoId, produto.Nome, produto.Categoria, produto.ValorUnitario, produto.Saldo);
