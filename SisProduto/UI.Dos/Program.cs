@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Aplicacao;
-using Dominio;
+using Repositorio.EF.DatabaseFirst;
 using Repositorio.SQLServer;
+//using Produto = Dominio.Produto;
+using Produto = Repositorio.EF.DatabaseFirst.Produto;
 
 namespace UI.Dos
 {
@@ -13,13 +15,14 @@ namespace UI.Dos
     {
         static void Main(string[] args)
         {
-            var produtoAplicacao = new ProdutoAplicacao();
 
-
+            //var produtoAplicacao = new ProdutoAplicacaoSQL();
+            var produtoAplicacao = new ProdutoAplicacaoEFDatatabaseFirst();
+            
             var produtoAlterar = new Produto()
                               {
                                   ProdutoId = 1,
-                                  Categoria = "Ferro",
+                                  Categoria = "Ferro Fundido",
                                   Nome = "Arruela",
                                   Saldo = 233,
                                   ValorUnitario = 10
@@ -39,7 +42,10 @@ namespace UI.Dos
 
             produtoAplicacao.InserirProduto(produtoInserir);
 
+            produtoAplicacao.ExcluirProuto(6);
+
             var produtos = produtoAplicacao.ListarProdutoPorNome("CAR");
+
             foreach (var produto in produtos)
             {
                 Console.WriteLine("{0} - {1} - {2} - R$ {3} - {4}", produto.ProdutoId, produto.Nome, produto.Categoria, produto.ValorUnitario, produto.Saldo);
