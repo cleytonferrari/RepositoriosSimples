@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio.SQLServer", "Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio.EF.DatabaseFirst", "Repositorio.EF.DatabaseFirst\Repositorio.EF.DatabaseFirst.csproj", "{46C0CB6F-E4C1-4A9C-A275-1A881854392D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI.Web", "UI.Web\UI.Web.csproj", "{4309E928-E8CB-42E8-A29E-7774C84A78C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{46C0CB6F-E4C1-4A9C-A275-1A881854392D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46C0CB6F-E4C1-4A9C-A275-1A881854392D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46C0CB6F-E4C1-4A9C-A275-1A881854392D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4309E928-E8CB-42E8-A29E-7774C84A78C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4309E928-E8CB-42E8-A29E-7774C84A78C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4309E928-E8CB-42E8-A29E-7774C84A78C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4309E928-E8CB-42E8-A29E-7774C84A78C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

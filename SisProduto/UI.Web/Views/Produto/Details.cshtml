@@ -1,0 +1,43 @@
+﻿@model Repositorio.EF.DatabaseFirst.Produto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Produto</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ValorUnitario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ValorUnitario)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Categoria)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Categoria)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Saldo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Saldo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProdutoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

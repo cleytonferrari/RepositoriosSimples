@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Sobre";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+    <p>
+        Este é um sistema desenvolvido para o aprendizado das tecnologias ASP.Net MVC 4, 
+        Entity Framework 5 e estudo de repositórios em aplicações web, na disciplina de Topícos 
+        Especiais II.
+    </p>
+</article>
+
+<aside>
+    <h3>Turma 2011.1</h3>
+    <p>
+        Formada pelos alunos....
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("Sobre", "About", "Home")</li>
+        <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
+    </ul>
+</aside>
